@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from scrapi import app
+from api import app
 
 if __name__ == "__main__":
     app.run(debug=True)
