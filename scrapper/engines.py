@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
 
-from scrapper import html
-
-
 class Engines:
-    def __init__(self):
+    """Get informations about engines preferences."""
+    def __init__(self, html):
         self.full_names, self.shortcuts = [], []
         for name in html.find_all("th", {"class": None}):
             self.full_names.append(name.get_text())
@@ -26,6 +24,7 @@ class Engines:
             self.shortcuts.append(shortcut.get_text())
 
     def all(self):
+        """Get all engines and shortcuts."""
         self.all_engines = []
         for i in range(len(self.full_names)):
             self.all_engines.append(
