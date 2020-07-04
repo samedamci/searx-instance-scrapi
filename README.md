@@ -5,8 +5,11 @@ Experimental scrapping API to getting informations from Searx instances.
 + 0.16.0
 
 ## Functions
-- [x] List all engines and shortcuts `/engines/all`
-- [x] Show info about engine by name (currently shortcut only) `/engines/?name=%s`
+- [x] List all engines and shortcuts. `/engines/all`
+- [x] Show info about engine by name (currently shortcut only). `/engines/?name=%s`
+- [ ] Show default categories.
+- [x] List default settings in "general" category. `/general/default`
+- [ ] Specify instance in query (also .onion instances).
 
 ## Development
 + Clone repo.

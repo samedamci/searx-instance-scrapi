@@ -2,8 +2,15 @@
 
 from flask import jsonify, request
 from api import app
-from scrapper.engines import Engines
+from scrapper import Engines, General
 from scrapper.request import get_html
+
+
+@app.route("/general/default", methods=["GET"])
+def general_default():
+    defaults = General(get_html()).default()
+
+    return jsonify(defaults)
 
 
 @app.route("/engines", methods=["GET"])
