@@ -32,3 +32,12 @@ class Engines:
             )
 
         return self.all_engines
+
+    def get_by_name(self, query_name):
+        """Get infromations about engine by name."""
+        all_engines = self.all()
+        for i in range(len(all_engines)):
+            engine_name = all_engines[i]['name']
+            if query_name == engine_name:
+                shortcut = all_engines[i]['shortcut']
+                return {"shortcut": shortcut}

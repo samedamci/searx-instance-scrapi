@@ -5,8 +5,8 @@ Experimental scrapping API to getting informations from Searx instances.
 + 0.16.0
 
 ## Functions
-- [x] List all engines and shortcuts
-`/engines/all`
+- [x] List all engines and shortcuts `/engines/all`
+- [x] Show info about engine by name (currently shortcut only) `/engines/?name=%s`
 
 ## Development
 + Clone repo.
