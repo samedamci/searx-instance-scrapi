@@ -2,7 +2,7 @@
 
 class Engines:
     """Get informations about engines preferences."""
-    def __init__(self, html):
+    def __init__(self, html: str):
         self.full_names, self.shortcuts = [], []
         for name in html.find_all("th", {"class": None}):
             self.full_names.append(name.get_text())
@@ -23,7 +23,7 @@ class Engines:
         for shortcut in html.find_all("td", {"class": "name"}):
             self.shortcuts.append(shortcut.get_text())
 
-    def all(self):
+    def all(self) -> list:
         """Get all engines and shortcuts."""
         self.all_engines = []
         for i in range(len(self.full_names)):
@@ -33,7 +33,7 @@ class Engines:
 
         return self.all_engines
 
-    def get_by_name(self, query_name):
+    def get_by_name(self, query_name: str) -> list:
         """Get infromations about engine by name."""
         all_engines = self.all()
         for i in range(len(all_engines)):

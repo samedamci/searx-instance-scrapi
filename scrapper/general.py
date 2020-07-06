@@ -3,12 +3,12 @@
 
 class General:
     """Get general settings."""
-    def __init__(self, html):
+    def __init__(self, html: str):
         self.selected = []
         for selection in html.find_all("option", {"selected": "selected"}):
             self.selected.append(selection.get_text())
 
-    def default(self):
+    def default(self) -> dict:
         """Get general settings default values."""
         if self.selected[3] == "Enabled":
             self.selected[3] = True
